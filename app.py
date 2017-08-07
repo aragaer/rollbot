@@ -2,7 +2,6 @@
 import os
 from flask import Flask, request
 import telepot
-import time
 
 import roll_dw
 
@@ -32,6 +31,8 @@ def pass_update():
     UPDATE_QUEUE.put(request.data)  # pass update to bot
     return 'OK'
 
-time.sleep(5)
-BOT.setWebhook(URL + SECRET)
-print("webhook set to", URL+SECRET)
+if os.getenv('PP_BOT_SET_WEBHOOK') is not None:
+    import time
+    time.sleep(5)
+    BOT.setWebhook(URL + SECRET)
+    print("webhook set to", URL+SECRET)
