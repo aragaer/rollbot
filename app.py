@@ -32,4 +32,4 @@ def pass_update():
     return 'OK'
 
 BOT.setWebhook(URL + SECRET)
-print("webhook set")
+print("webhook set to", URL+SECRET)
