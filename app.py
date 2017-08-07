@@ -13,7 +13,7 @@ except ImportError:
 app = Flask(__name__)
 TOKEN = os.environ['PP_BOT_TOKEN']
 SECRET = '/bot' + TOKEN
-URL = 'https://shrouded-meadow-82782.herokuapp.com/'
+URL = 'https://shrouded-meadow-82782.herokuapp.com'
 
 UPDATE_QUEUE = Queue()
 BOT = telepot.Bot(TOKEN)
